@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 int main()
 {
@@ -14,7 +13,7 @@ int main()
         printf("NO");
         return 0;
     }
-    for (int i = 2; i <= sqrt(num); i++)
+    for (int i = 2; i <= num / 2; i++)
     {
         if (num % i == 0)
         {

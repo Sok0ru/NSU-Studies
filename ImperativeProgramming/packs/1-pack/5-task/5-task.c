@@ -1,5 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
+
+int abs(int num)
+{
+    return (num < 0) ? -num : num;
+}
 
 int main()
 {
@@ -9,6 +13,7 @@ int main()
 
     int a, b;
     int r;
+
     scanf("%d %d", &a, &b);
     printf("%d", a / b - (a % b != 0 && a < 0));
     printf(" %d", a / b + (a % b != 0 && a > 0));

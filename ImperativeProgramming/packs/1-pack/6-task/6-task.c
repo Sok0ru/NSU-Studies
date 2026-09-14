@@ -7,29 +7,25 @@ int main()
     freopen("output.txt", "w", stdout);
 
     int count;
-    int nums[20];
     scanf("%d", &count);
+
+    int min_val;
+    int min_idx = 1;
+    int max_val;
+    int max_idx = 1;
 
     for (int i = 0; i < count; i++)
     {
-        scanf("%d", &nums[i]);
-    }
-
-    int min_val = nums[0];
-    int min_idx = 1;
-    int max_val = nums[0];
-    int max_idx = 1;
-
-    for (int i = 1; i < count; i++)
-    {
-        if (nums[i] < min_val)
+        int current;
+        scanf("%d", &current);
+        if (i == 0 || current < min_val)
         {
-            min_val = nums[i];
+            min_val = current;
             min_idx = i + 1;
         }
-        if (nums[i] > max_val)
+        if (i == 0 || current > max_val)
         {
-            max_val = nums[i];
+            max_val = current;
             max_idx = i + 1;
         }
     }
