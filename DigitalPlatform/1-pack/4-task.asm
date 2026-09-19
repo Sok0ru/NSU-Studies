@@ -7,16 +7,15 @@ asect  0x00
 # Do not include a halt instruction: that has been done already (below)
 # ---------------------------------------------------------------------
 
-
-
+	ldi r1, 0b00000001
+	ldi r2, 0x02
+	ldi r3, 3
 
 # =================================
 # LEAVE THIS PART OF THE FILE ALONE
 # Do not change the next five instructions: they must be the last five
 # instructions executed by your program.
-	ldi r1, 0b00000001
-	ldi r2, 0x02
-	ldi r3, 3
+
     push r3
     push r2
     push r1
