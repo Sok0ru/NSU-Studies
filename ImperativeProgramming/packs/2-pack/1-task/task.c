@@ -50,18 +50,36 @@ int main()
         }
     }
 
-    if (count == 0)
+    switch (count)
     {
+    case 0:
         printf("Invalid");
-    }
-    else if (count > 1)
-    {
-        printf("Ambiguous");
-    }
-    else
-    {
+        break;
+
+    case 1:
         printf("%d", selected_day);
+        break;
+
+    case 2:
+        printf("Ambiguous");
+        break;
+
+    default:
+        break;
     }
+
+    // if (count == 0)
+    // {
+    //     printf("Invalid");
+    // }
+    // else if (count > 1)
+    // {
+    //     printf("Ambiguous");
+    // }
+    // else
+    // {
+    //     printf("%d", selected_day);
+    // }
 
     return 0;
 }

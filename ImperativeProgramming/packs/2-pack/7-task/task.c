@@ -1,4 +1,4 @@
-#include <stdio.h>
+
 
 int digit_value(char num)
 {
