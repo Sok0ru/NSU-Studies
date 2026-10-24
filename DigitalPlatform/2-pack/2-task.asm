@@ -14,7 +14,6 @@ ldi r2, b
 ld r2, r2
 
 ldi r3, 7
-ld r3, r3
 
 sub r3, r1
 sub r1, r2

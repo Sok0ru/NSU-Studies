@@ -13,12 +13,15 @@ ld r1, r1
 ldi r2, b
 ld r2, r2
 
-
 ldi r3, c
 ld r3, r3
 
 add r1, r2
 add r2, r3
+
+ldi r1, 3
+
+add r1, r3
 
 ldi r0, res
 st r0, r3
