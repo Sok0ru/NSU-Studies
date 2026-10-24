@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 int skip_marks(char symbol)
@@ -17,6 +16,7 @@ int upper_count(char *word)
         if (word[i] >= 'A' && word[i] <= 'Z')
             ++count;
     }
+
     return count;
 }
 
@@ -25,9 +25,9 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 
-    char *str = malloc(1000002);
+    char str[1000002];
 
-    fgets(str, 1000002, stdin);
+    fgets(str, sizeof(str), stdin);
 
     int start = 0;
     int len = strlen(str);
@@ -47,9 +47,10 @@ int main()
                        i - start,
                        word);
             }
+
             start = i + 1;
         }
     }
-    free(str);
+
     return 0;
 }
