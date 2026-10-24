@@ -4,3 +4,4 @@ task.exe
 input.txt
 output.txt
 .vscode
+__pycache__
