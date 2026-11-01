@@ -37,7 +37,7 @@ int main()
         for (int i = 0; i < node_unit; ++i)
             scanf("%7s %d", lists[i].value, &lists[i].next);
 
-        int nextIndex = node_unit;
+        int next_index = node_unit;
 
         for (int i = 0; i < operations; ++i)
         {
@@ -48,21 +48,21 @@ int main()
             {
             case 0:
             {
-                scanf("%7s", lists[nextIndex].value);
+                scanf("%7s", lists[next_index].value);
 
                 if (index == -1)
                 {
-                    lists[nextIndex].next = first;
-                    first = nextIndex;
+                    lists[next_index].next = first;
+                    first = next_index;
                 }
                 else
                 {
-                    lists[nextIndex].next = lists[index].next;
-                    lists[index].next = nextIndex;
+                    lists[next_index].next = lists[index].next;
+                    lists[index].next = next_index;
                 }
 
-                printf("%d\n", nextIndex);
-                ++nextIndex;
+                printf("%d\n", next_index);
+                ++next_index;
                 break;
             }
             case 1:
