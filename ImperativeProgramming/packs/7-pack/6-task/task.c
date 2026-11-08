@@ -67,14 +67,8 @@ void erase(double *what)
 
 void freeList(double *sub_node)
 {
-    double *curr = getNext(sub_node);
-
-    while (curr != sub_node)
-    {
-        double *next = getNext(curr);
-        erase(curr);
-        curr = next;
-    }
+    while (getNext(sub_node) != sub_node)
+        erase(getNext(sub_node));
 
     free(getNode(sub_node));
 }

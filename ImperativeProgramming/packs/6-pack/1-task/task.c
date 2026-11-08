@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdint.h>
 
-void swap_bytes(int *value)
+void swap_bytes(int32_t *value)
 {
-    unsigned char *bytes = (unsigned char *)value;
+    uint8_t *bytes = (uint8_t *)value;
 
-    unsigned char temp = bytes[0];
+    uint8_t temp = bytes[0];
     bytes[0] = bytes[3];
     bytes[3] = temp;
 
@@ -18,8 +19,8 @@ int main()
     freopen("input.txt", "rb", stdin);
     freopen("output.txt", "wb", stdout);
 
-    int count;
-    fread(&count, sizeof(int), 1, stdin);
+    int32_t count;
+    fread(&count, sizeof(count), 1, stdin);
 
     int need_swap = 0;
 
@@ -29,12 +30,12 @@ int main()
         need_swap = 1;
     }
 
-    int sum = 0;
+    int32_t sum = 0;
 
     for (int i = 0; i < count; ++i)
     {
-        int value;
-        fread(&value, sizeof(int), 1, stdin);
+        int32_t value;
+        fread(&value, sizeof(value), 1, stdin);
 
         if (need_swap)
             swap_bytes(&value);
@@ -45,7 +46,7 @@ int main()
     if (need_swap)
         swap_bytes(&sum);
 
-    fwrite(&sum, sizeof(int), 1, stdout);
+    fwrite(&sum, sizeof(sum), 1, stdout);
 
     return 0;
 }
