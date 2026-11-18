@@ -24,7 +24,7 @@ asect 0x00
     ldi r3, bHi
     ld r3, r3
 
-    add r3, r2
+    addc r3, r2
 
     ldi r3, resHi
     st r3, r2
@@ -44,10 +44,10 @@ asect 0x00
 # ---------------------------------------------------------------------
 
 INPUTS>
-aLo: dc 2  # replace 0 by your choice of low byte for testing
-aHi: dc 5  # replace 0 by your choice of high byte for testing
-bLo: dc 8  # replace 0 by your choice of low byte for testing
-bHi: dc 3  # replace 0 by your choice of high byte for testing
+aLo: dc 0b00101100  # replace 0 by your choice of low byte for testing
+aHi: dc 0b00000001  # replace 0 by your choice of high byte for testing
+bLo: dc 0b11100100  # replace 0 by your choice of low byte for testing
+bHi: dc 0b00000101  # replace 0 by your choice of high byte for testing
 ENDINPUTS>
 
 resLo: ds 1

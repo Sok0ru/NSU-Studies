@@ -38,7 +38,6 @@ asect 0x00
 # compiling and running it several times with different input data values
 # (different bit-strings placed at addresses aLo, aHi, bLo and bHi)
 # ---------------------------------------------------------------------
-
 INPUTS>
 a: dc 0xFF  # replace 0 by your choice of low byte for testing
 b: dc 0xFF  # replace 0 by your choice of high byte for testing

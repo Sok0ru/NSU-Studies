@@ -44,14 +44,9 @@ minus:
 	push r2
 	push r3
 	
-	if
-		cmp r0, r2
-	is lo
-		dec r1
-	fi
-	
+	not r3
 	sub r0, r2
-	sub r1, r3
+	addc r1, r3
 	
 	move r2, r0
 	move r3, r1
@@ -61,10 +56,10 @@ minus:
 	rts
 
 INPUTS>
-aLo:	dc	0b00000010 	# replace 0 by your choice of low byte for testing
-aHi:	dc	0b10000000 	# replace 0 by your choice of high byte for testing
-bLo:	dc	0b00000100 	# replace 0 by your choice of low byte for testing
-bHi:	dc	0b00000001	# replace 0 by your choice of high byte for testing
+aLo:	dc	5 	# replace 0 by your choice of low byte for testing
+aHi:	dc	0 	# replace 0 by your choice of high byte for testing
+bLo:	dc	2 	# replace 0 by your choice of low byte for testing
+bHi:	dc	0	# replace 0 by your choice of high byte for testing
 ENDINPUTS>
 
 resLo:	ds	1

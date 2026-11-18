@@ -13,11 +13,12 @@ asect 0x00
     ldi r1, b
     ld r1, r1
 
-    ldi r2, 0b00000001
+    ldi r2, 0b00000010
     or r0, r1
+	or r1, r2
 
     ldi r3, res
-    st r3, r1
+    st r3, r2
 
 # =================================
 # LEAVE THIS PART OF THE FILE ALONE
@@ -34,8 +35,8 @@ asect 0x00
 # ---------------------------------------------------------------------
 
 INPUTS>
-a: dc 0b11000000  # replace the empty set by your choice of A for testing
-b: dc 0b10000000  # replace the empty set by your choice of B for testing
+a: dc 0b11000001  # replace the empty set by your choice of A for testing
+b: dc 0b10000100  # replace the empty set by your choice of B for testing
 ENDINPUTS>
 res: ds 1
 
